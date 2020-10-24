@@ -1,0 +1,124 @@
+:root {
+    --primary: #000;
+}
+
+body {
+    background-color: #e9ecef;
+}
+
+.navbar {
+    border-bottom: 5px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #55d986, #1ce1ea) border-box;
+}
+
+.welcomeTitle {
+    font-size: 40px;
+}
+
+.bordered {
+    padding-bottom: 5px;
+    border-bottom: 5px solid #55d986;
+    border-image: linear-gradient(45deg, #55d986, #1ce1ea) 1;
+}
+
+.int-boxes .card {
+    border: 3px solid var(--primary);
+    margin-left: 70px;
+    padding-left: 70px;
+    border-radius: 1rem;
+    height: 150px;
+}
+
+.int-boxes .card .card-body {
+    text-align: right;
+    display: flex;
+   padding: 10px 20px;
+}
+
+.card-box{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    color: #55d986;  
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    left: -50px;
+    border-radius: 1rem;
+}
+
+.card-box i{
+    font-size: 50px;
+}
+
+.card-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.card-info h3{
+    font-size: 25px;
+    margin:0;
+}
+
+.card-info h2{
+    font-size: 50px;
+}
+
+.row{
+    margin-top: 30px;
+}
+
+
+.schedule .card{
+    border: 3px solid #000;
+    border-radius: 1rem;
+    margin-top: 30px;
+}
+
+.schedule .card .card-title{
+    background-color: #000;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 17px 30px;
+    width: 93%;
+    position: relative;
+    left: 25px;
+    top: -30px;
+    font-size: 25px;
+}
+
+.schedule .card-body{
+    padding: 0;
+}
+
+.schedule ul{
+    list-style: none;
+    padding: 0;
+}
+
+.schedule ul li{
+    border-bottom: 3px solid #ccc;
+    padding: 0px 20px;
+}
+
+.schedule ul li .line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule ul li .line .time{
+   color: #2196f3;
+   font-weight: 700;
+}
+
+
+.schedule.calendar .card .card-title{
+    width: 46%;
+}
