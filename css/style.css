@@ -32,15 +32,15 @@ body {
 .int-boxes .card .card-body {
     text-align: right;
     display: flex;
-   padding: 10px 20px;
+    padding: 10px 20px;
 }
 
-.card-box{
+.card-box {
     margin-top: 10px;
     width: 100px;
     height: 100px;
     background-color: #000;
-    color: #55d986;  
+    color: #55d986;
     display: flex;
     align-items: center;
     position: absolute;
@@ -49,11 +49,11 @@ body {
     border-radius: 1rem;
 }
 
-.card-box i{
+.card-box i {
     font-size: 50px;
 }
 
-.card-info{
+.card-info {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -62,31 +62,31 @@ body {
 
 
 
-.card-info h3{
+.card-info h3 {
     font-size: 25px;
-    margin:0;
+    margin: 0;
 }
 
-.card-info h2{
+.card-info h2 {
     font-size: 50px;
 }
 
-.row{
+.row.pad {
     margin-top: 30px;
 }
 
 
-.schedule .card{
+.schedule .card {
     border: 3px solid #000;
     border-radius: 1rem;
     margin-top: 30px;
 }
 
-.schedule .card .card-title{
+.schedule .card .card-title {
     background-color: #000;
     color: #fff;
     border-radius: 1rem;
-    padding: 17px 30px;
+    padding: 15px 30px;
     width: 93%;
     position: relative;
     left: 25px;
@@ -94,31 +94,52 @@ body {
     font-size: 25px;
 }
 
-.schedule .card-body{
+.schedule .card-body {
     padding: 0;
 }
 
-.schedule ul{
+.schedule ul.int {
     list-style: none;
     padding: 0;
 }
 
-.schedule ul li{
+.schedule ul.int li {
     border-bottom: 3px solid #ccc;
     padding: 0px 20px;
 }
 
-.schedule ul li .line{
+.schedule ul.int li .line {
     display: flex;
     justify-content: space-between;
 }
 
-.schedule ul li .line .time{
-   color: #2196f3;
-   font-weight: 700;
+.schedule ul.int li .line .time {
+    color: #2196f3;
+    font-weight: 700;
 }
 
 
-.schedule.calendar .card .card-title{
+.schedule.calendar .card .card-title {
     width: 46%;
+}
+
+.table tr td {
+    padding-left: 10px;
+}
+
+.schedule .card-body {
+    margin-top: -20px;
+}
+
+.schedule.interview .card-body {
+    margin-top: -50px;
+}
+
+.dataTables_paginate,
+.dataTables_filter {
+    padding-right: 15px;
+}
+
+.dataTables_info{
+    padding-left:15px;
 }
