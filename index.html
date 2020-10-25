@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>MazoBeam</title>
     <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/fullcalendar.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dataTables.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -18,6 +19,22 @@
             <img src="img/logo.png" alt="logo">
         </a>
     </nav>
+
+    <div class="drop-modal">
+        <div class="collapse" id="collapseExample">
+            <ul class="drop-menu">
+                <li>
+                    <a href="#">Profile</a>                   
+                </li>
+                <li>
+                    <a href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <a class="drop-button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          <div class="fa fa-user-circle"></div>  Vidhya M <div class="fa fa-chevron-down"></div>
+        </a>
+    </div>
 
     <main class="container-fluid">
         <div class="row pad">
@@ -165,36 +182,271 @@
                 <div class="card">
                     <div class="card-title">Calendar Schedule</div>
                     <div class="card-body">
-                        <ul>
-                            <li>
-                                <div class="line">
-                                    <h5> Interview with Subramaniyam Swamy</h5>
-                                    <div>
-                                        <span class="time"> 9AM - 10AM</span>
-                                        <span class="text-secondary">60m</span>
+                        <div class="row">
+                            <div class="col">
+                                <div id="calendar"></div>
+                            </div>
+                            <div class="col">
+                                <div class="row h-100">
+                                    <div class="col-1 meeting">
+                                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                            aria-orientation="vertical">
+                                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                                href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                                aria-selected="true">25</a>
+                                            <hr class="m-0">
+                                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                                href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                                aria-selected="false">26</a>
+                                            <hr class="m-0">
+                                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                                href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                                aria-selected="false">27</a>
+                                            <hr class="m-0">
+                                            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                                                href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                                aria-selected="false">28</a>
+                                            <hr class="m-0">
+                                            <a class="nav-link" id="v-pills-marker-tab" data-toggle="pill"
+                                                href="#v-pills-marker" role="tab" aria-controls="v-pills-marker"
+                                                aria-selected="false">29</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="tab-content meeting-details" id="v-pills-tabContent">
+                                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                                aria-labelledby="v-pills-home-tab">
+                                                <ul class="meet">
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Vignesh K.</h3>
+                                                            <p>Front End Developer</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Subramaniyam Swamy</h3>
+                                                            <p>Front End Developer Lorem, ipsum dolor sit amet
+                                                                consectetur adipisicing elit. Asperiores, in! Lorem
+                                                                ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Necessitatibus, corrupti.</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Aryan Mehta</h3>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Laudantium nemo qui minima autem, expedita cupiditate
+                                                                necessitatibus voluptate repudiandae aut sunt?</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                                aria-labelledby="v-pills-profile-tab">
+                                                <ul class="meet">
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Vignesh K. 2</h3>
+                                                            <p>Front End Developer</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Subramaniyam Swamy 2</h3>
+                                                            <p>Front End Developer Lorem, ipsum dolor sit amet
+                                                                consectetur adipisicing elit. Asperiores, in! Lorem
+                                                                ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Necessitatibus, corrupti.</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Aryan Mehta 2</h3>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Laudantium nemo qui minima autem, expedita cupiditate
+                                                                necessitatibus voluptate repudiandae aut sunt?</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                                aria-labelledby="v-pills-messages-tab">
+                                                <ul class="meet">
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Vignesh K. 3</h3>
+                                                            <p>Front End Developer</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Subramaniyam Swamy 3</h3>
+                                                            <p>Front End Developer Lorem, ipsum dolor sit amet
+                                                                consectetur adipisicing elit. Asperiores, in! Lorem
+                                                                ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Necessitatibus, corrupti.</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Aryan Mehta 3</h3>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Laudantium nemo qui minima autem, expedita cupiditate
+                                                                necessitatibus voluptate repudiandae aut sunt?</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                                aria-labelledby="v-pills-settings-tab">
+                                                <ul class="meet">
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Vignesh K. 4</h3>
+                                                            <p>Front End Developer</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Subramaniyam Swamy 4 </h3>
+                                                            <p>Front End Developer Lorem, ipsum dolor sit amet
+                                                                consectetur adipisicing elit. Asperiores, in! Lorem
+                                                                ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Necessitatibus, corrupti.</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Aryan Mehta 4</h3>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Laudantium nemo qui minima autem, expedita cupiditate
+                                                                necessitatibus voluptate repudiandae aut sunt?</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-marker" role="tabpanel"
+                                                aria-labelledby="v-pills-settings-tab">
+                                                <ul class="meet">
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Vignesh K. 5</h3>
+                                                            <p>Front End Developer</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Subramaniyam Swamy 5</h3>
+                                                            <p>Front End Developer Lorem, ipsum dolor sit amet
+                                                                consectetur adipisicing elit. Asperiores, in! Lorem
+                                                                ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Necessitatibus, corrupti.</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <div class="content-info">
+                                                            <h3>Meeting With Aryan Mehta 5</h3>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Laudantium nemo qui minima autem, expedita cupiditate
+                                                                necessitatibus voluptate repudiandae aut sunt?</p>
+                                                        </div>
+                                                        <div class="content-details">
+                                                            <p>09:00</p>
+                                                            <p>10:00</p>
+                                                            <span class="small">60m</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="line">
-                                    <h5> Interview with Vignesh S.</h5>
-                                    <div>
-                                        <span class="time"> 10AM - 10:30AM</span>
-                                        <span class="text-secondary">30m</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="line">
-                                    <h5> Interview with Aryan Mehta</h5>
-                                    <div>
-                                        <span class="time"> 3PM - 4PM</span>
-                                        <span class="text-secondary">60m</span>
-                                    </div>
-                                </div>
-                            </li>
 
-                        </ul>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -257,15 +509,30 @@
         </div>
     </main>
 
-
-
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/dataTables.min.js"></script>
+    <script src="js/fullcalendar.js"></script>
     <script src="js/main.js"></script>
 
     <script>
         $(document).ready(function () {
+
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                selectable: true,
+                themeSystem: 'bootstrap',
+                headerToolbar: {
+                    start: 'title',
+                    center: '',
+                    end: ''
+                },
+                showNonCurrentDates: false,
+                fixedWeekCount: false
+            });
+            calendar.render();
+
             $('#interviewTable').DataTable({
                 lengthChange: false,
                 language: {
@@ -273,6 +540,8 @@
                     searchPlaceholder: "Search..."
                 }
             });
+
+            $('.fc-daygrid-day-top-element').text('1');
         });
     </script>
 </body>
